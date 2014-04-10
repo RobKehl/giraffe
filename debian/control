@@ -233,7 +233,7 @@ Description: Archive messages to a secondary Giraffe server
 Package: giraffe-webaccess
 Architecture: all
 Section: web
-Depends:  ${misc:Depends}, php5-mapi
+Depends:  ${misc:Depends}, fckeditor, php5-mapi
 Description: Web interface for the Giraffe Collaboration Platform
  Giraffe is an unbranded Zarafa Collaboration Platform suitable for free
  distribution.

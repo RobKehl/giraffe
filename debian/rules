@@ -105,6 +105,10 @@ install-indep:
 	cp debian/artwork/zarafa_top_logo_WHITE.gif $(INSTDIR)/usr/share/zarafa-webaccess/client/layout/themes/white/img/zarafa_top_logo.gif
 
 	dh_install -i --sourcedir=debian/tmp --fail-missing
+	# linking fckeditor instead of using the shipped one by Zarafa
+	rm debian/giraffe-webaccess/usr/share/zarafa-webaccess/client/widgets/fckeditor/fckeditor.js
+	cd debian/giraffe-webaccess/usr/share/zarafa-webaccess/client/widgets/fckeditor && \
+		ln -s ../../../../fckeditor/fckeditor.js
 
 install-arch:
 	dh_testdir
